@@ -1,0 +1,102 @@
+/* Contact Us Section Styling */
+#contact-us {
+    padding: 3% 5%;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+/* Header */
+#contact-us h2 {
+    font-size: 2.5rem;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+#contact-us p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Flex container for contact details and form */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Contact Details */
+.contact-details {
+    max-width: 300px;
+    color: #333;
+    text-align: left;
+}
+
+.contact-details h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.contact-details ul li {
+    margin: 8px 0;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a4a48;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

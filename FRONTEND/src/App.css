@@ -1,0 +1,23 @@
+#Home{
+  box-sizing: border-box;
+  height: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+#App{
+  background-color: #d6d3cb;
+  font-family: 'Poppins', sans-serif;
+}
+#Footer{
+  position:sticky;
+  z-index: 1000;
+  bottom: 0px;
+}
+#Nav{
+  background-color: #d6d3cb;
+  border-bottom: 1px solid #2c3e50;
+  position:sticky;
+  z-index: 10000;
+  top: 0px;
+}

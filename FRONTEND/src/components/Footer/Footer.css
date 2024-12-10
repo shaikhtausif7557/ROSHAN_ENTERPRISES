@@ -1,0 +1,26 @@
+.footer {
+    background-color: #333;
+    color: #d6d3cb;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-section {
+    flex: 1; /* Evenly distributes space between sections */
+    padding: 5px;
+    min-width: 200px; /* Controls minimum width for responsive wrap */
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.footer p {
+    margin: 3px 0;
+}
