@@ -9,7 +9,7 @@ function Work({ isActive }) {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/projects');
+                const response = await fetch('https://roshan-enterprises-685q.onrender.com/api/projects');
                 const data = await response.json();
                 console.log('Fetched data:', data); // Log the actual fetched data
                 setProjects(data); // Set the fetched projects
@@ -46,7 +46,7 @@ function Work({ isActive }) {
         const newProject = { ...newWork, year: parseInt(newWork.year) }; // Ensure year is a number
 
         // Send a POST request to the backend API to add the new project
-        const response = await fetch('http://localhost:5000/api/projects', {
+        const response = await fetch('https://roshan-enterprises-685q.onrender.com/api/projects', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
