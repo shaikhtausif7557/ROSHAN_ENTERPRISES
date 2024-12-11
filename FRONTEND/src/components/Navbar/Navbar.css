@@ -1,59 +1,105 @@
-/* Navigation Bar */
-nav {
-    height: 10vh;
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1% 4%;
-    background-color: inherit;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure the navbar is above other elements when scrolling */
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+h1 span {
+    color: #008a83;
 }
 
 /* Navigation Items */
-#nav-items {
-    display: flex; /* Show menu items by default */
+.nav-items {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    font-size: 1.5rem;
 }
 
-/* Links */
-a {
+.nav-items a {
     text-decoration: none;
     color: black;
-    transition: color 0.3s; /* Smooth transition effect */
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
-/* Optional hover effect for links */
-a:hover {
-    color: #008a83; /* You can adjust this color to suit your design */
+.nav-items a:hover {
+    color: #008a83;
 }
 
-nav h1 span {
-    color: #2c3e50;
-    font-size: 2.6rem;
-}
-
-/* Login Button */
+/* Login/Logout Button */
 #login {
     background-color: #008a83;
-    width: 120px; /* Set width for consistency */
-    height: 40px; /* Set height for consistency */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 20px;
     border-radius: 25px;
-    border: 1px solid black;
-    color: white; /* Text color for better visibility */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth transition effect */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #login:hover {
-    background-color: #006f6f; /* Darker shade on hover */
+    background-color: #006f6f;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items a {
+        margin: 10px 0;
+    }
 }
 
 /* Modal Overlay */
@@ -74,49 +120,42 @@ nav h1 span {
 .modal-content {
     width: 400px;
     padding: 20px;
-    background: #fff;
+    background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
     text-align: center;
 }
 
-/* Form Styling */
 .modal-content form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
 .modal-content input {
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Submit and Close Buttons */
 .modal-content button {
-    margin-top: 15px;
     padding: 10px;
     background-color: #008a83;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: opacity 0.3s;
+    
+
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
 }
 
 .modal-content .close-btn {
-    background-color: #e74c3c; /* Red color for close button */
+    background-color: #e74c3c;
+    margin-top: 10px;
 }
-
-.modal-content .close-btn:hover,
-.modal-content button:hover {
-    opacity: 0.9; /* Slightly fade button on hover */
-}
-
-/* Optional additional styles for consistency */
-#nav-items a,
-#login {
-    margin-right: 20px; /* Space between nav items */
-}
-

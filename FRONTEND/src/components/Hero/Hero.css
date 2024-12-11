@@ -24,6 +24,7 @@ h1 {
 }
 
 #content-left h1 span {
+    color: #333;
     line-height: 1.6;
     font-size: 3.5rem;
 }
@@ -52,4 +53,35 @@ button {
     font-size: large;
     margin-top: 2%;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Hero {
+        flex-direction: column; /* Stack content vertically */
+        height: auto;
+        padding: 10px;
+    }
 
+    #content-left {
+        display: flex;
+        align-items: center;
+        width: 100%; /* Take full width on smaller screens */
+        text-align: center; /* Center-align text for smaller screens */
+        padding: 10px;
+    }
+    #content-right{
+        display: none;
+    }
+
+    #content-left h1 span {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    img {
+        max-width: 80%;
+    }
+
+    button {
+        width: 60%; /* Make the button wider */
+        margin: 10px auto; /* Center the button */
+    }
+}
