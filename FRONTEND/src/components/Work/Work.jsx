@@ -11,7 +11,6 @@ function Work({ isActive }) {
             try {
                 const response = await fetch('https://roshan-enterprises-685q.onrender.com/api/projects');
                 const data = await response.json();
-                console.log('Fetched data:', data); // Log the actual fetched data
                 setProjects(data); // Set the fetched projects
             } catch (error) {
                 console.error('Error fetching projects:', error); // Log any errors
