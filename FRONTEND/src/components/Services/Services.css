@@ -1,71 +1,169 @@
+/* Main Services Container */
 #services {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2% 5%; /* Add padding for spacing */
+    box-sizing: border-box;
 }
 
+/* Header Styling */
 #header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 3%;
 }
-#header h1{
-    text-decoration-line: underline;
+
+#header h1 {
+    text-decoration: underline;
     font-size: 2.8rem;
+    color: #333;
 }
-#header p{
-    font-size: 1.4rem;
+
+#header p {
+    font-size: 1.2rem;
     text-align: center;
+    color: #666;
 }
+
+/* Service List Grid */
 #service_list {
-    padding: 5% 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
     justify-items: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
+/* Card Styling */
 .card {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     background-color: #4a4a48;
     align-items: center;
     color: #d6d3cb;
     border-radius: 10px;
-    justify-content: space-around;
+    padding: 20px;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-.card section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
+/* Card Image Styling */
 .card .img {
-    width: 150px; /* Fixed width for uniform size */
-    height: 150px; /* Fixed height for uniform size */
+    width: 150px;
+    height: 150px;
     background-color: #d6d3cb;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Ensures image stays within circular boundary */
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .card .img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Scales the image to cover the div */
-    border-radius: 50%; /* Ensures image is circular */
+    object-fit: cover;
+    border-radius: 50%;
 }
 
+/* Card Text Section */
+.card section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.card section h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.card section p {
+    font-size: 1rem;
+    color: #d6d3cb;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #service_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #header h1 {
+        font-size: 2.5rem;
+    }
+
+    #header p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #service_list {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+    }
+
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #header p {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card section h1 {
+        font-size: 1.3rem;
+    }
+
+    .card section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.8rem;
+    }
+
+    #header p {
+        font-size: 0.9rem;
+    }
+
+    .card .img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card section h1 {
+        font-size: 1.2rem;
+    }
+
+    .card section p {
+        font-size: 0.8rem;
+    }
+}

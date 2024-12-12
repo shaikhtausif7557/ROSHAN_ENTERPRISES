@@ -18,10 +18,26 @@
     font-size: 1.2rem;
 }
 
+/* Add Work Button */
+.add-works-btn {
+    background-color: #008a83; /* Match with your theme color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.add-works-btn:hover {
+    background-color: #006f6c; /* Darker shade on hover */
+}
+
 /* Grid Layout */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px;
     margin-top: 20px;
 }
@@ -51,17 +67,125 @@
     font-size: 1rem;
     color: #777;
 }
-.add-works-btn {
-    background-color: #008a83; /* Match with your theme color */
-    color: white;
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    background-color: #ff5c5c;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px 0; /* Add some space around the button */
-    font-size: 1rem; /* Adjust font size as needed */
+    margin-top: 10px;
 }
 
-.add-works-btn:hover {
-    background-color: #006f6c; /* Darker shade on hover */
+.close-btn:hover {
+    background-color: #e60000;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    background-color: #008a83;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #006f6c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #our-works h2 {
+        font-size: 2rem;
+    }
+
+    #our-works p {
+        font-size: 1rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        gap: 15px;
+    }
+
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #our-works h2 {
+        font-size: 1.8rem;
+    }
+
+    #our-works p {
+        font-size: 0.9rem;
+    }
+
+    form input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    form button[type="submit"], .close-btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
 }

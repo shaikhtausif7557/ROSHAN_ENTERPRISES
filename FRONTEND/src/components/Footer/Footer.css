@@ -1,26 +1,85 @@
 .footer {
     background-color: #333;
     color: #d6d3cb;
-    padding: 10px 20px;
+    padding: 15px 10px; /* Reduce padding to make the footer more compact */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
-    text-align: center;
-    font-size: 0.9rem;
+    justify-content: space-around; /* Space sections evenly without excessive width */
+    align-items: flex-start; /* Align items at the top for consistency */
+    flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
+    text-align: left;
+    font-size: 0.85rem; /* Slightly reduce font size */
+    gap: 15px; /* Add moderate spacing between sections */
 }
 
 .footer-section {
-    flex: 1; /* Evenly distributes space between sections */
-    padding: 5px;
-    min-width: 200px; /* Controls minimum width for responsive wrap */
+    flex: 1 1 30%; /* Allow sections to occupy 30% width and adapt */
+    min-width: 220px; /* Ensure sections stay readable on small screens */
+    max-width: 300px; /* Limit maximum width to prevent excessive coverage */
+    padding: 5px; /* Minimize padding for compactness */
 }
 
 .footer h2 {
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1.3rem; /* Moderate header size */
+    margin-bottom: 5px;
+    color: #fff;
 }
 
 .footer p {
-    margin: 3px 0;
+    margin: 5px 0;
+    line-height: 1.4; /* Slightly tighter line spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-evenly; /* Adjust for medium screens */
+    }
+
+    .footer-section {
+        flex: 1 1 45%; /* Allow sections to use more width on medium screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: none; /* Disable flex-grow on smaller screens */
+        min-width: unset; /* Let sections adapt dynamically */
+        padding: 10px 0; /* Compact padding */
+    }
+
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem; /* Reduce text size for compact layouts */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px 5px; /* Compact padding for mobile */
+    }
+
+    .footer-section {
+        width: 100%; /* Ensure sections take full width */
+        padding: 5px 0;
+    }
+
+    .footer h2 {
+        font-size: 1.1rem; /* Smaller header size */
+    }
+
+    .footer p {
+        font-size: 0.75rem; /* Smallest text size */
+        line-height: 1.3;
+    }
 }
