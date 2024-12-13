@@ -21,3 +21,12 @@ html {
   z-index: 10000;
   top: 0px;
 }
+
+@media (max-width: 480px) {
+ #Footer{
+  position:sticky;
+  z-index: 1000;
+  bottom: 0px;
+  height: 20vh;
+ } 
+}

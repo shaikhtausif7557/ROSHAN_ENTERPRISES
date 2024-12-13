@@ -8,7 +8,6 @@
     flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
     text-align: left;
     font-size: 0.85rem; /* Slightly reduce font size */
-    gap: 15px; /* Add moderate spacing between sections */
 }
 
 .footer-section {

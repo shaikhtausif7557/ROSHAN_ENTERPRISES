@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node BACKEND/server.js",
-    "dev":"node BACKEND/server.js",
-    "build":"npm install && npm install --prefix FRONTEND && npm run build --prefix FRONTEND"
+    "dev": "node BACKEND/server.js",
+    "build": "npm install && npm install --prefix FRONTEND && npm run build --prefix FRONTEND"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.8.4"
+    "mongoose": "^8.8.4",
+    "nodemailer": "^6.9.16",
+    "sweetalert2": "^11.14.5"
   }
 }
