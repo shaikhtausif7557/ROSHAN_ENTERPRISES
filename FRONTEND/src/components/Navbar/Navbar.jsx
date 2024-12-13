@@ -48,6 +48,7 @@ function Navbar({ isActive, setIsActive }) {
                         <a href="#Home">Home</a>
                         <a href="#Aboutus">About Us</a>
                         <a href="#Services">Our Services</a>
+                        <a href="#Works">Our Works</a>
                         <a href="#Contact">Contact Us</a>
                         {isActive ? (
                             <div id="login" role="button" onClick={handleLogout} aria-label="Logout">
