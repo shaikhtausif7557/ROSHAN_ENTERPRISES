@@ -24,9 +24,8 @@ html {
 
 @media (max-width: 480px) {
  #Footer{
-  position:sticky;
+  position:fixed;
   z-index: 1000;
   bottom: 0px;
-  height: 20vh;
  } 
 }
