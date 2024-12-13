@@ -4,7 +4,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import projectRoutes from './routes/projects.js';
 import path from 'path';
-import nodemailer from 'nodemailer';
 
 dotenv.config();
 
@@ -29,3 +28,7 @@ mongoose
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error('MongoDB connection error:', err));
 
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
